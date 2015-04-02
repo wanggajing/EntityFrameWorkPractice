@@ -8,6 +8,10 @@ namespace EntityFrameWorkPractice.Model
     public class Repository
     {
         private BreakAwayContext context = new BreakAwayContext();
+        public IEnumerable<Destination> GetDestinations()
+        {
+            return context.Destinations;
+        }
         public void InsertDestination()
         {
             var destination = new Destination 

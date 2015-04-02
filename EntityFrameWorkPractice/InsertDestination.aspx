@@ -16,12 +16,13 @@
                 <th>Description</th>
                 <th>Name</th>
             </tr>
-            <asp:Repeater ID="Repeater1" runat="server" ItemType="EntityFrameWorkPractice.Model.Destination">
+            <asp:Repeater ID="Repeater1" runat="server" ItemType="EntityFrameWorkPractice.Model.Destination"
+                 SelectMethod="GetDestinations">
                 <ItemTemplate>
                     <tr>
-                        <td><%#:Item.Country %><</td>
-                        <td><%#:Item.Description %><</td>
-                        <td><%#:Item.Name %><</td>
+                        <td><%#:Item.Country %></td>
+                        <td><%#:Item.Description %></td>
+                        <td><%#:Item.Name %></td>
                     </tr>
                 </ItemTemplate>
             </asp:Repeater>

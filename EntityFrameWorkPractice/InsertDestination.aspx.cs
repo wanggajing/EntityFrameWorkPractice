@@ -20,5 +20,10 @@ namespace EntityFrameWorkPractice
         {
             repository.InsertDestination();
         }
+
+        public IEnumerable<EntityFrameWorkPractice.Model.Destination> GetDestinations()
+        {
+            return repository.GetDestinations();
+        }
     }
 }
