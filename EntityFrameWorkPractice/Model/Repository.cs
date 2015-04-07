@@ -8,6 +8,13 @@ namespace EntityFrameWorkPractice.Model
     public class Repository
     {
         private BreakAwayContext context = new BreakAwayContext();
+        public IEnumerable<Employee> Employees
+        {
+            get
+            {
+                return context.Employees;
+            }
+        }
         public void InsertDestination()
         {
             var destination = new Destination 
@@ -18,6 +25,6 @@ namespace EntityFrameWorkPractice.Model
             };
             context.Destinations.Add(destination);
             context.SaveChanges();
-        } 
+        }
     }
 }

@@ -63,6 +63,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Global.asax" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -73,9 +74,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="InsertDestination.aspx" />
+    <Content Include="Pages\ListEmployee.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="InsertDestination.aspx.cs">
       <DependentUpon>InsertDestination.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -84,9 +89,19 @@
       <DependentUpon>InsertDestination.aspx</DependentUpon>
     </Compile>
     <Compile Include="Model\BreakAwayContext.cs" />
+    <Compile Include="Model\BreakAwayInitializer.cs" />
+    <Compile Include="Model\Department.cs" />
     <Compile Include="Model\Destination.cs" />
+    <Compile Include="Model\Employee.cs" />
     <Compile Include="Model\Lodging.cs" />
     <Compile Include="Model\Repository.cs" />
+    <Compile Include="Pages\ListEmployee.aspx.cs">
+      <DependentUpon>ListEmployee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ListEmployee.aspx.designer.cs">
+      <DependentUpon>ListEmployee.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
