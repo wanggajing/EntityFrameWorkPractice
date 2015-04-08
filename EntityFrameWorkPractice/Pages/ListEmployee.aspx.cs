@@ -19,5 +19,14 @@ namespace EntityFrameWorkPractice.Pages
         {
             return repository.GetEmployeesWithDept();
         }
+
+        protected void AddEmployee_Click(object sender, EventArgs e)
+        {
+            Employee employee = new Employee();
+            employee.Name = EName.Text;
+            employee.Age = Convert.ToInt32(EAge.Text);
+            employee.Department = repository.Departments.Where(d => d.Name == Department.Text).FirstOrDefault();
+            repository.AddEmployee(employee);
+        }
     }
 }
