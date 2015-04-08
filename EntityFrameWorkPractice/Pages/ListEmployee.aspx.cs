@@ -17,7 +17,7 @@ namespace EntityFrameWorkPractice.Pages
         }
         public IEnumerable<Employee> GetEmployees()
         {
-            return repository.Employees;
+            return repository.GetEmployeesWithDept();
         }
     }
 }

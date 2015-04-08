@@ -15,6 +15,11 @@ namespace EntityFrameWorkPractice.Model
                 return context.Employees;
             }
         }
+        public IEnumerable<Employee> GetEmployeesWithDept()
+        {
+            var employees = context.Employees.Include("Department");
+            return employees;
+        }
         public void InsertDestination()
         {
             var destination = new Destination 
