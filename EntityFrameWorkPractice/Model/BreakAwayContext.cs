@@ -10,6 +10,8 @@ namespace EntityFrameWorkPractice.Model
     {
         public BreakAwayContext() : base("BreakAway") { }
         public DbSet<Destination> Destinations { get; set; }
-        public DbSet<Lodging> Lodgings { get; set; } 
+        public DbSet<Lodging> Lodgings { get; set; }
+        public DbSet<Employee> Employees { get; set; }
+        public DbSet<Department> Departments { get; set; }
     }
 }

@@ -8,9 +8,35 @@ namespace EntityFrameWorkPractice.Model
     public class Repository
     {
         private BreakAwayContext context = new BreakAwayContext();
+<<<<<<< HEAD
         public IEnumerable<Destination> GetDestinations()
         {
             return context.Destinations;
+=======
+        public IEnumerable<Employee> Employees
+        {
+            get
+            {
+                return context.Employees;
+            }
+        }
+        public IEnumerable<Department> Departments
+        {
+            get
+            {
+                return context.Departments;
+            }
+        }
+        public void AddEmployee(Employee e)
+        {
+            context.Employees.Add(e);
+            context.SaveChanges();
+        }
+        public IEnumerable<Employee> GetEmployeesWithDept()
+        {
+            var employees = context.Employees.Include("Department");
+            return employees;
+>>>>>>> origin/master
         }
         public void InsertDestination()
         {
@@ -22,6 +48,6 @@ namespace EntityFrameWorkPractice.Model
             };
             context.Destinations.Add(destination);
             context.SaveChanges();
-        } 
+        }
     }
 }
